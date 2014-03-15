@@ -1,0 +1,32 @@
+/*
+color palette:
+	Sharp Green: #7b2
+	Dashing Green: #196
+	Keen Green: #144
+	Old as the Earth: #322
+	Seen About Brown: #730
+	Cream: #ffd;
+*/
+
+body {
+	width:960px;
+	margin:0px auto;
+	background-color:#322;
+}
+
+h1 {
+	
+}
+
+a {
+	text-decoration:none;
+	color:#7b2;
+}
+
+section {
+	border:10px solid #144;
+	border-radius:20px;
+	box-shadow: 0px 5px 20px #181818;
+	background-color: #ffd;
+	padding:5px;
+}

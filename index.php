@@ -1,12 +1,14 @@
 <?php
-require "views/Mainview.php";
+require_once "views/MainView.php";
 	
 $view = new MainView();
-
 $view->showHeader("Your Community Garden");
 
-echo "Hello World";
+?>
+	<section>
+		Hello World
+	</section>
+<?php
 	
 $view->showFooter();
-	
 ?>
