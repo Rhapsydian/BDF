@@ -10,6 +10,9 @@
 			include "views/html/footer.inc";
 		}
 		
+		public function showIndexPlants($plants) {
+			include "views/html/indexPlants.inc";
+		}
 	}
 
 ?>
