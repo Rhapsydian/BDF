@@ -28,7 +28,7 @@ class MainModel {
 			JOIN plantspecies ON plants.species = plantspecies.speciesId
 			JOIN plantedible ON plants.edible = plantedible.edibleId
 			WHERE plants.plantId = :id
-			ORDER BY plantspecies.species
+			ORDER BY plantspecies.species, plants.planted
 		");
 		$query->execute(array(
 			':id' => $id

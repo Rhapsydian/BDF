@@ -13,6 +13,10 @@
 		public function showIndexPlants($plants) {
 			include "views/html/indexPlants.inc";
 		}
+		
+		public function showPlantDetail($plant) {
+			include "views/html/plantDetail.inc";
+		}
 	}
 
 ?>

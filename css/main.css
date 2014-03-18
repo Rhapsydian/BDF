@@ -30,3 +30,12 @@ section {
 	background-color: #ffd;
 	padding:5px;
 }
+
+table {
+	margin:5px auto;
+
+}
+
+td {
+	padding:5px 10px;
+}
