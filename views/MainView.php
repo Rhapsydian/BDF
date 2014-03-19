@@ -14,7 +14,7 @@
 			include "views/html/login.inc";
 		}
 		
-		public function showPlants($plants) {
+		public function showPlants($user,$plants) {
 			include "views/html/plants.inc";
 		}
 		

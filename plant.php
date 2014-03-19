@@ -5,6 +5,10 @@ require_once "models/MainModel.php";
 	
 $view = new MainView();
 $model =  new MainModel(DB_HOST,DB_USER,DB_PASS);
+$control = new SessionController();
+
+$control->userArea();
+$user = $control->getUser();
 
 $view->showHeader("Your Community Garden");
 
