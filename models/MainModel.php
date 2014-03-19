@@ -36,6 +36,28 @@ class MainModel {
 		$plants = $query->fetchAll(PDO::FETCH_ASSOC);
 		return $plants;
 	}
+	
+	public function getUser($userName,$password) {
+		$query = $this->db->prepare("
+			SELECT *
+			FROM users
+			WHERE username = :userName AND
+				password = MD5(CONCAT(passsalt,:password))
+		");
+		$query->execute(array(
+			':userName' => $userName,
+			':password' => $password
+		));
+		$user = $query->fetchAll(PDO::FETCH_ASSOC);
+		if(count($user) === 1)
+		{
+			return $user[0];
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
 
 ?>

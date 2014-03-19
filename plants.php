@@ -4,11 +4,11 @@ require_once "models/db.php";
 require_once "models/MainModel.php";
 	
 $view = new MainView();
-$model =  new MainModel(DB_HOST,DB_USER,DB_PASS);
+$model = new MainModel(DB_HOST,DB_USER,DB_PASS);
 
 $view->showHeader("Your Community Garden");
 
-$view->showPlantDetail( $model->getPlantsById(filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT)) );
+$view->showPlants($model->getPlantsAll());
 
 $view->showFooter();
 ?>

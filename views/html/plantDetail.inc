@@ -11,7 +11,7 @@
 			}
 			else
 			{
-				echo '<p>We\'re sorry, there has been a mistake.  <a href="/index.php">Please click here to return to the home page.</a></p>';
+				echo '<p>We\'re sorry, there has been a mistake.  <a href="/plants.php">Please click here to return to the home page.</a></p>';
 			}
 		?>
 	</section>

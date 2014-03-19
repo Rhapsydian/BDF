@@ -10,13 +10,18 @@
 			include "views/html/footer.inc";
 		}
 		
-		public function showIndexPlants($plants) {
-			include "views/html/indexPlants.inc";
+		public function showIndex($errorMessage = '') {
+			include "views/html/login.inc";
+		}
+		
+		public function showPlants($plants) {
+			include "views/html/plants.inc";
 		}
 		
 		public function showPlantDetail($plant) {
 			include "views/html/plantDetail.inc";
 		}
+		
 	}
 
 ?>
