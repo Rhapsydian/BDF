@@ -41,6 +41,10 @@ class SessionController {
 		exit;
 	}
 
+	public function redirect($where) {
+		header('Location: ' . $where);
+		exit;
+	}
 }
 
 ?>

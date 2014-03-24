@@ -55,8 +55,13 @@ table {
 
 }
 
-td {
+td, th {
 	padding:5px 10px;
+}
+
+label {
+	display:inline-block;
+	width:90px;
 }
 
 .error {
