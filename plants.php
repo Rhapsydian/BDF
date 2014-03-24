@@ -11,9 +11,12 @@ $control = new SessionController();
 $control->userArea();
 $user = $control->getUser();
 
-$view->showHeader("Your Community Garden");
-
-$view->showPlants($user,$model->getPlantsAll());
-
-$view->showFooter();
+$view->show("header",array(
+	'pageTitle' => 'Your Community Garden',
+));
+$view->show("plants",array(
+	'user' => $user,
+	'plants' => $model->getPlantsAll(),
+));
+$view->show("footer");
 ?>

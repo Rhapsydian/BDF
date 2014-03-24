@@ -30,8 +30,13 @@ else
 	}
 }
 
-$view->showHeader("Your Community Garden");
-$view->showIndex($errorMessage);
-$view->showFooter();
+#$view->showHeader("Your Community Garden");
+$view->show("header",array(
+	'pageTitle' => 'Your Community Garden',
+));
+$view->show("login",array(
+	'errorMessage' => $errorMessage,
+));
+$view->show("footer");
 
 ?>
