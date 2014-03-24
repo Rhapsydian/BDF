@@ -33,6 +33,7 @@ else
 #$view->showHeader("Your Community Garden");
 $view->show("header",array(
 	'pageTitle' => 'Your Community Garden',
+	'user' => $user,
 ));
 $view->show("login",array(
 	'errorMessage' => $errorMessage,

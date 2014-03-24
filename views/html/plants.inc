@@ -1,5 +1,5 @@
 	<section>
-		<div class="welcome">Welcome <?php echo $data['user']['firstname'] . " " . $data['user']['lastname'] ?>! Click here to <a href="logout.php">logout</a>.</div>
+		<h2>Plant List:</h2>
 		<table>
 			<thead>
 				<th>Species</th><th>Edible</th><th>Planted</th><th>Harvest</th>

@@ -13,6 +13,7 @@ $user = $control->getUser();
 
 $view->show("header",array(
 	'pageTitle' => 'Your Community Garden',
+	'user' => $user,
 ));
 $view->show("plants",array(
 	'user' => $user,
