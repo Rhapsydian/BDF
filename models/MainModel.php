@@ -58,6 +58,16 @@ class MainModel {
 			return false;
 		}
 	}
+	
+	public function getUsersAll() {
+		$query = $this->db->prepare("
+			SELECT *
+			FROM users
+		");
+		$query->execute();
+		$users = $query->fetchAll(PDO::FETCH_ASSOC);
+		return $users;
+	}
 }
 
 ?>

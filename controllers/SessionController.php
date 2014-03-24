@@ -19,10 +19,18 @@ class SessionController {
 		$_SESSION['userData'] = $user;
 	}
 	
-	public function userArea() {
+	public function userArea($level = 0) {
 		if(!isset($_SESSION['userData'])) {
 			header('Location: index.php');
 			exit;
+		}
+		else
+		{
+			if((int)$_SESSION['userData']['userTypeId'] < $level)
+			{
+				header('Location: index.php');
+				exit;
+			}
 		}
 	}
 	
