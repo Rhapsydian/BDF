@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Plants extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,34 +22,16 @@ class Welcome extends CI_Controller {
 		$this->load->model('Model_main');
 		$this->load->model('Model_session');
 		
+		$this->Model_session->userArea();
 		$user = $this->Model_session->getUser();
-		$errorMessage = '';
 		
-		if($user) {
-			header('Location: plants');
-			exit;
-		}
-		else
-		{
-			if(!empty($_POST['username']) && !empty($_POST['password'])) {
-				$user = $this->Model_main->getUser(trim($_POST['username']),trim('password'));
-				if($user) {
-					$this->Model_session->setUser($user);
-					header('Location: plants');
-					exit;
-				}
-				else {
-					$errorMessage = "Incorrect username or password.";
-				}
-			}
-		}
-		
-		$this->load->view('header',array(
+		$this->load->view('header', array(
 			'pageTitle' => 'Your Community Garden',
 			'user' => $user,
 		));
-		$this->load->view('login',array(
-			'errorMessage' => $errorMessage,
+		
+		$this->load->view('plants',array(
+			'plants' => $this->Model_main->getPlantsAll(),
 		));
 		$this->load->view('footer');
 	}

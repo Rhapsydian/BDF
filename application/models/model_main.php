@@ -48,7 +48,7 @@ public function getPlantsAll() {
 			$userName,
 			$password
 		));
-		$user = $query->result;
+		$user = $query->result();
 		if(count($user) === 1)
 		{
 			return $user[0];
