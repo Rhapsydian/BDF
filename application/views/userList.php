@@ -10,17 +10,17 @@
 				<th>Options</th>
 			</thead>
 		<?php
-			foreach($data['users'] as $key => $user) {
-				echo '<tr>' . '<td>' . $user['firstname'] . ' ' . $user['lastname'] . '</td>' .
-					'<td>' . $user['username'] . '</td>' .
-					'<td>' . $user['dob'] . '</td>' .
-					'<td>' . $user['userStatusID'] . '</td>' .
-					'<td>' . $user['userTypeId'] . '</td>' .
-					'<td>' . $user['createdDate'] . '</td>' .
-					'<td><a href="/userEdit.php?id=' . $user['userid'] . '">Edit</a> <a href="/userRemove.php?id=' . $user['userid'] . '">Remove</a></td>' .
+			foreach($users as $key => $user) {
+				echo '<tr>' . '<td>' . $user->firstname . ' ' . $user->lastname . '</td>' .
+					'<td>' . $user->username . '</td>' .
+					'<td>' . $user->dob . '</td>' .
+					'<td>' . $user->userStatusID . '</td>' .
+					'<td>' . $user->userTypeId . '</td>' .
+					'<td>' . $user->createdDate . '</td>' .
+					'<td><a href="/userAdmin/edit?id=' . $user->userid . '">Edit</a> <a href="/userAdmin/remove?id=' . $user->userid . '">Remove</a></td>' .
 					'</tr>';
 			}
 		?>
 		</table>
-		<a href="/userAdd.php">+ Add User</a>
+		<a href="/userAdmin/add">+ Add User</a>
 	</section>

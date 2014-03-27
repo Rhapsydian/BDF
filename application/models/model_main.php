@@ -122,7 +122,7 @@ public function getPlantsAll() {
 				username = ?,
 				passsalt = LEFT(MD5(CURRENT_TIME),10),
 				password = MD5(CONCAT(passsalt,?)),
-				dob = :dob,
+				dob = ?,
 				userStatusID = ?,
 				userTypeId = ?,
 				createdDate = NOW()
@@ -144,7 +144,7 @@ public function getPlantsAll() {
 		$query = $this->db->query("
 			DELETE
 			FROM users
-			WHERE userid = :userid
+			WHERE userid = ?
 		",
 		array(
 			$id,
