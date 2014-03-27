@@ -1,6 +1,0 @@
-UPDATE users SET passsalt = LEFT(MD5(CURRENT_TIME),10) WHERE userid = 2
-
-UPDATE users SET password = MD5(CONCAT(passsalt,password));
-
-
-INSERT INTO users SET firstname = 'Justin', lastname = 'Stephens', username = 'JStephens', passsalt = LEFT(MD5(CURRENT_TIME),10), password = MD5(CONCAT(passsalt,'password')), dob = '19870716', userStatusID = 1, userTypeId = 1, createdDate = CURRENT_DATE;
